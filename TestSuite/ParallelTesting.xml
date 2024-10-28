@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+<listeners>
+    <listener class-name="RahulShettyFrameWork_AppTest.TestComponents.Listeners"/>
+
+</listeners>
+    <test thread-count="5" name="submit order test">
+        <classes>
+            <class name="RahulShettyFrameWork_AppTest.StandAloneTest">
+                <methods>
+                    <include name="submitOrder"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+    <test thread-count="5" name="Error Validation">
+        <classes>
+
+            <class name="RahulShettyFrameWork_AppTest.TestComponents.ErrorValidations">
+                <methods >
+                    <include name="errorValidationOfSubmitOrder"/>
+                    <include name="errorValidationInCartPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
